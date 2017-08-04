@@ -1,2 +1,2 @@
 # MyAnnouncements
-Simple, easy announcement plugin for Minecraft
+Simple, easy to use announcement plugin for Minecraft
