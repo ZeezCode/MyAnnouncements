@@ -1,0 +1,40 @@
+name: MyAnnouncements
+version: 1.0
+author: Zee
+main: net.craftmountain.myannouncements.MyAnnouncements
+depend: [Vault]
+
+commands:
+  myannouncements:
+    description: MyAnnouncements base command
+    aliases: [myannouncement, mya, ma]
+
+permissions:
+  ma.*:
+    description: Gives access to all MyAnnouncements commands
+    default: false
+    children:
+      ma.base: true
+      ma.reload: true
+      ma.version: true
+      ma.toggle: true
+      ma.broadcast: true
+      ma.force: true
+  ma.base:
+    description: Gives access to MyAnnouncements base command
+    default: true
+  ma.reload:
+    description: Gives access to /ma reload
+    default: op
+  ma.version:
+    description: Gives access to /ma version
+    default: op
+  ma.toggle:
+    description: Gives access to /ma toggle
+    default: op
+  ma.broadcast:
+    description: Gives access to /ma broadcast
+    default: op
+  ma.force:
+    description: Gives access to /ma force
+    default: op

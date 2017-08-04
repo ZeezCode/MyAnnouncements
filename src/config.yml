@@ -1,0 +1,10 @@
+#Plugin prefix (Shows before announcements)
+prefix: '&2[&aMyAnnouncements&2] '
+
+#Announcement delay (Time between announcements, in seconds)
+delay: 60
+
+#List of announcements (Not limited in amount - have as many or little as you wish)
+announcements:
+ - '&1Test announcement!'
+ - '&1This &2is &3my &4second &5announcement&6!'
