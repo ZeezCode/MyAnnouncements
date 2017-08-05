@@ -25,4 +25,20 @@ public class Utilities {
     public static boolean hasPermission(CommandSender sender, String permission) {
         return (!(sender instanceof Player)) || MyAnnouncements.getInstance().getPermissions().has(sender, permission);
     }
+
+    /**
+     * <p>Returns whether or not given String is a valid integer</p>
+     *
+     * @param toParse String to be parsed
+     * @return boolean Whether or not given String is a valid integer
+     */
+    public static boolean isValidInt(String toParse) {
+        try {
+            Integer.parseInt(toParse);
+        } catch(Exception e) {
+            return false;
+        }
+        return true;
+    }
+
 }

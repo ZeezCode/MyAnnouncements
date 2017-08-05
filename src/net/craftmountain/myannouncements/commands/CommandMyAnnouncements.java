@@ -21,7 +21,10 @@ public class CommandMyAnnouncements implements CommandExecutor {
                     + ChatColor.GREEN + "/ma reload " + ChatColor.WHITE + "Reload plugin config\n"
                     + ChatColor.GREEN + "/ma toggle " + ChatColor.WHITE + "Pause/resume announcements\n"
                     + ChatColor.GREEN + "/ma broadcast " + ChatColor.WHITE + "Send a custom broadcast\n"
-                    + ChatColor.GREEN + "/ma force " + ChatColor.WHITE + "Force the next broadcast";
+                    + ChatColor.GREEN + "/ma force " + ChatColor.WHITE + "Force the next broadcast\n"
+                    + ChatColor.GREEN + "/ma add " + ChatColor.WHITE + "Add a new announcement\n"
+                    + ChatColor.GREEN + "/ma list " + ChatColor.WHITE + "List all announcements\n"
+                    + ChatColor.GREEN + "/ma remove " + ChatColor.WHITE + "Remove an announcement";
             sender.sendMessage(message);
             return true;
         }

@@ -32,6 +32,9 @@ public class MyAnnouncements extends JavaPlugin {
         executors.add(new CommandToggle("toggle"));
         executors.add(new CommandBroadcast("broadcast"));
         executors.add(new CommandForce("force"));
+        executors.add(new CommandAdd("add"));
+        executors.add(new CommandList("list"));
+        executors.add(new CommandRemove("remove"));
 
         getLogger().info(pdfFile.getName() + " has been successfully enabled!");
     }

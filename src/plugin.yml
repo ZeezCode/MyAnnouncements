@@ -20,6 +20,9 @@ permissions:
       ma.toggle: true
       ma.broadcast: true
       ma.force: true
+      ma.add: true
+      ma.list: true
+      ma.remove: true
   ma.base:
     description: Gives access to MyAnnouncements base command
     default: true
@@ -37,4 +40,13 @@ permissions:
     default: op
   ma.force:
     description: Gives access to /ma force
+    default: op
+  ma.add:
+    description: Gives access to /ma add
+    default: op
+  ma.list:
+    description: Gives access to /ma list
+    default: op
+  ma.remove:
+    description: Gives access to /ma remove
     default: op
