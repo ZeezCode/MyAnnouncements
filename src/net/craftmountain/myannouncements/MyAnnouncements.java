@@ -2,7 +2,9 @@ package net.craftmountain.myannouncements;
 
 import net.craftmountain.myannouncements.commands.*;
 import net.craftmountain.myannouncements.utilities.Announcer;
+import net.craftmountain.myannouncements.utilities.Menu;
 import net.milkbowl.vault.permission.Permission;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,6 +27,7 @@ public class MyAnnouncements extends JavaPlugin {
         announcer = new Announcer();
         getCommand("myannouncements").setExecutor(new CommandMyAnnouncements());
         setupPermissions();
+        Bukkit.getPluginManager().registerEvents(new Menu(), this);
 
         executors = new ArrayList<>();
         executors.add(new CommandVersion("version"));
@@ -35,6 +38,7 @@ public class MyAnnouncements extends JavaPlugin {
         executors.add(new CommandAdd("add"));
         executors.add(new CommandList("list"));
         executors.add(new CommandRemove("remove"));
+        executors.add(new CommandMenu("menu"));
 
         getLogger().info(pdfFile.getName() + " has been successfully enabled!");
     }

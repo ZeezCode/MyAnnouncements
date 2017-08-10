@@ -15,7 +15,7 @@ public class CommandReload implements MyAnnouncementsCommand {
 
     @Override
     public void onCommand(CommandSender sender, String[] args) {
-        if (!(Utilities.hasPermission(sender, "ma.reload"))) {
+        if (!(Utilities.hasPermission(sender, "ma.admin"))) {
             sender.sendMessage(ChatColor.RED + "You don't have permission to use this command!");
         } else {
             MyAnnouncements.getInstance().reloadAnnouncer();

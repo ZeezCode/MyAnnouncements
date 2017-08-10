@@ -16,7 +16,7 @@ public class CommandVersion implements MyAnnouncementsCommand {
 
     @Override
     public void onCommand(CommandSender sender, String[] args) {
-        if (!(Utilities.hasPermission(sender, "ma.version"))) {
+        if (!(Utilities.hasPermission(sender, "ma.admin"))) {
             sender.sendMessage(ChatColor.RED + "You don't have permission to use this command!");
         } else {
             PluginDescriptionFile pdfFile = MyAnnouncements.getInstance().getDescription();

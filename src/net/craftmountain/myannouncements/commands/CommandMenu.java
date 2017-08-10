@@ -1,17 +1,16 @@
 package net.craftmountain.myannouncements.commands;
 
-import net.craftmountain.myannouncements.MyAnnouncements;
+import net.craftmountain.myannouncements.utilities.Menu;
 import net.craftmountain.myannouncements.utilities.Utilities;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
-import java.util.List;
-
-public class CommandList implements MyAnnouncementsCommand {
+public class CommandMenu implements MyAnnouncementsCommand {
 
     private String command;
 
-    public CommandList(String command) {
+    public CommandMenu(String command) {
         this.command = command;
     }
 
@@ -20,10 +19,10 @@ public class CommandList implements MyAnnouncementsCommand {
         if (!(Utilities.hasPermission(sender, "ma.admin"))) {
             sender.sendMessage(ChatColor.RED + "You don't have permission to use this command!");
         } else {
-            List<String> announcements = MyAnnouncements.getInstance().getConfig().getStringList("announcements");
-            sender.sendMessage(ChatColor.GREEN + "All Announcements:");
-            for (int i = 0; i<announcements.size(); i++) {
-                sender.sendMessage(ChatColor.GREEN + "" + (i+1) + ": " + ChatColor.YELLOW + ChatColor.translateAlternateColorCodes('&', announcements.get(i)));
+            if (sender instanceof Player) {
+                Menu.openGUI((Player) sender);
+            } else {
+                sender.sendMessage(ChatColor.RED + "You must be a player to use this command!");
             }
         }
     }

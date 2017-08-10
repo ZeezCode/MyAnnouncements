@@ -18,7 +18,7 @@ public class CommandRemove implements MyAnnouncementsCommand {
 
     @Override
     public void onCommand(CommandSender sender, String[] args) {
-        if (!(Utilities.hasPermission(sender, "ma.remove"))) {
+        if (!(Utilities.hasPermission(sender, "ma.admin"))) {
             sender.sendMessage(ChatColor.RED + "You don't have permission to use this command!");
         } else {
             if (args.length < 2) { //If not enough args

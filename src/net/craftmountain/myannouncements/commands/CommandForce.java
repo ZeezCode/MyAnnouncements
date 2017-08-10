@@ -19,7 +19,7 @@ public class CommandForce implements MyAnnouncementsCommand {
 
     @Override
     public void onCommand(CommandSender sender, String[] args) {
-        if (!(Utilities.hasPermission(sender, "ma.force"))) {
+        if (!(Utilities.hasPermission(sender, "ma.admin"))) {
             sender.sendMessage(ChatColor.RED + "You don't have permission to use this command!");
         } else {
             Announcer ann = Announcer.getInstance();

@@ -24,7 +24,8 @@ public class CommandMyAnnouncements implements CommandExecutor {
                     + ChatColor.GREEN + "/ma force " + ChatColor.WHITE + "Force the next broadcast\n"
                     + ChatColor.GREEN + "/ma add " + ChatColor.WHITE + "Add a new announcement\n"
                     + ChatColor.GREEN + "/ma list " + ChatColor.WHITE + "List all announcements\n"
-                    + ChatColor.GREEN + "/ma remove " + ChatColor.WHITE + "Remove an announcement";
+                    + ChatColor.GREEN + "/ma remove " + ChatColor.WHITE + "Remove an announcement\n"
+                    + ChatColor.GREEN + "/ma menu " + ChatColor.WHITE + "Open MyAnnouncements menu";
             sender.sendMessage(message);
             return true;
         }
